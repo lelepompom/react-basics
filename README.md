@@ -50,8 +50,17 @@ Redux is a predictable state container for JavaScript apps. It helps you write a
 ```npm i --save react-router-dom redux react-redux```
 
 ## JSX
-JSX is a syntax to include XHTML into Javascript. React Components must be named in PascalCase. Attrs and events, in camelCase.
+[JSX](https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized) is a syntax to include XHTML into Javascript. React Components must be named in PascalCase. Attrs and events, in camelCase. This will be the name of the tag.
 
 At HTML `class` and `for` props becomes `className` and `htmlFor` to prevent conflicts with Javascript ones .
 
 On elements its important to return a single tag. If this is not possible, we can return multiple tags inside <React.fragment> to avoid a global tag on them. This can be needed for example on returned option tags inside a select.
+
+## Components and Props
+All React components must act like pure functions with respect to their [props](https://reactjs.org/docs/components-and-props.html).
+Props are inmutable and read-only.
+
+## States
+[State](https://reactjs.org/docs/state-and-lifecycle.html) cannot be modified directly, is private and belongs to the component. State value can be set by `this.setState`. 
+
+See how you can organize your [files](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
