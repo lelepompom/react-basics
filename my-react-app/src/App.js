@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Demos, { Saluda } from "./demos";
 import Calculator from "./calculator";
+import Calculadora from "./calculadora";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       </header>
       {/* <Demos init={0} delta={Saluda({ name: "San" })} /> */}
 
-      <Calculator />
+      <Calculadora />
+      {/* <Calculator /> */}
     </div>
   );
 }
