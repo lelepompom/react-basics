@@ -64,3 +64,33 @@ Props are inmutable and read-only.
 [State](https://reactjs.org/docs/state-and-lifecycle.html) cannot be modified directly, is private and belongs to the component. State value can be set by `this.setState`. 
 
 See how you can organize your [files](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
+
+## Lifecycle
+* getDefaultProps()
+* getInitialState()
+* componentWillMount()
+* render()
+* componentDidMount()
+State musnt change while is rendering. It can do it on events.
+#### Update State
+* shouldComponentUpdate(): boolean
+* componentWillUpdate(next_props, next_state)
+* render()
+* componentDidUpdate()
+#### Update Props
+* componentWillReceiveProps(next_props)
+* shouldComponentUpdate(): boolean
+* componentWillUpdate()
+* render()
+* componentDidUpdate()
+#### Unmount
+* componentWillUnmount()
+
+## Error Boundaries
+* static getDerivedStateFromError(error)
+* componentDidCatch()
+* render()
+A class component becomes an error boundary if it defines either (or both) of the lifecycle methods static getDerivedStateFromError() or componentDidCatch(). Use static getDerivedStateFromError() to render a fallback UI after an error has been thrown. Use componentDidCatch() to log error information.
+[Error boundaries](https://reactjs.org/docs/error-boundaries.html) work like a JavaScript catch {} block, but for components. Only class components can be error boundaries. In practice, most of the time you’ll want to declare an error boundary component once and use it throughout your application.
+Note that error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself. If an error boundary fails trying to render the error message, the error will propagate to the closest error boundary above it. This, too, is similar to how catch {} block works in JavaScript.
+

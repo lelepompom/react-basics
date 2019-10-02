@@ -31,6 +31,22 @@ export default class Demos extends Component {
   constructor(props) {
     super(props);
     this.state = { value: 1 };
+    console.info("constructor");
+  }
+  componentWillMount() {
+    console.info("Will mount");
+  }
+  componentWillReceiveProps() {
+    console.info("Props!");
+  }
+  componentDidMount() {
+    console.info("Mounted!");
+  }
+  componentDidUpdate() {
+    console.info("Updated!");
+  }
+  componentWillUpdate() {
+    console.info("Will update");
   }
   render() {
     return (

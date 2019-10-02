@@ -22,9 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
-      {/* <Demos init={0} delta={Saluda({ name: "San" })} /> */}
+      <Demos init={0} delta={Saluda({ name: "San" })} />
 
-      <Calculadora />
+      {/* <Calculadora /> */}
       {/* <Calculator /> */}
     </div>
   );
