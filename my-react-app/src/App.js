@@ -4,11 +4,12 @@ import "./App.css";
 import Demos, { Saluda } from "./demos";
 import Calculator from "./calculator";
 import Calculadora from "./calculadora";
+import Newsfeed from "./newsfeed";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,11 +22,12 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-      <Demos init={0} delta={Saluda({ name: "San" })} />
+      </header> */}
+      {/* <Demos init={0} delta={Saluda({ name: "San" })} /> */}
 
       {/* <Calculadora /> */}
       {/* <Calculator /> */}
+      <Newsfeed rows={5} cols={6} />
     </div>
   );
 }
