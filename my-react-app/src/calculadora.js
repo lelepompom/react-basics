@@ -31,7 +31,11 @@ class BtnCalcular extends Component {
   render() {
     return (
       <td colSpan={this.props.colSpan ? this.props.colSpan : 1}>
-        <button className={this.props.css} onClick={this.handleClick}>
+        <button
+          className={this.props.css}
+          className={`btn btn-secondary`}
+          onClick={this.handleClick}
+        >
           {this.props.texto}
         </button>
       </td>
@@ -87,7 +91,7 @@ export default class Calculadora extends Component {
   render() {
     console.warn("Calculadora render");
     return (
-      <table className="Calculadora">
+      <table className="Calculadora table" style={{ maxWidth: `260px` }}>
         <thead>
           {this.state.resumen && <Resumen resumen={this.state.resumen} />}
           <Pantalla pantalla={this.state.pantalla} />

@@ -7,10 +7,11 @@ export class PostList extends Component {
     return (
       <div>
         {this.props.list.map(post => (
-          <div>
-            <p>Id: {post.id}</p>
-            <p>Title: {post.title}</p>
-            <p>Author: {post.author}</p>
+          <div style={{ textAlign: `justify`, marginBottom: `1rem` }}>
+            <h4>
+              {post.id} | {post.titulo}
+            </h4>
+            <h6>{post.autor}</h6>
             <div>{post.texto}</div>
           </div>
         ))}
@@ -19,7 +20,7 @@ export class PostList extends Component {
   }
 }
 
-export class Post extends Component {
+export class PostForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};

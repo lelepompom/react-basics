@@ -32,6 +32,15 @@ export default class App extends Component {
     ];
     this.state = { currentComponent: this.menu[0].component };
     this.selectOption = this.loadComponent.bind(this);
+    this.inputButtonStyle = {
+      margin: `5px`,
+      backgroundColor: `#dadada`,
+      border: `none`,
+      padding: `5px 15px`,
+      borderRadius: `3px`,
+      color: `#fff`,
+      fontWeight: `bold`
+    };
   }
 
   loadComponent(index) {
@@ -67,6 +76,7 @@ export default class App extends Component {
               type="button"
               value={item.text}
               onClick={this.selectOption.bind(this, index)}
+              style={this.inputButtonStyle}
               key={item + `-` + index}
             />
           ))}
