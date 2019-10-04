@@ -99,3 +99,23 @@ A class component becomes an error boundary if it defines either (or both) of th
 
 Note that error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself. If an error boundary fails trying to render the error message, the error will propagate to the closest error boundary above it. This, too, is similar to how catch {} block works in JavaScript.
 
+## Routing
+`npm i react-router-dom --save`
+```
+<BrowserRoute>
+<div><!--  --></div>
+<Switch>
+<Route>
+</Route>
+</Switch>
+</BrowserRoute>
+```  
+
+## Flux
+[Flux](https://facebook.github.io/flux/docs/overview)
+
+## Redux
+[Redux](https://redux.js.org/introduction/core-concepts)
+* Actions: 
+* Reducers: Persist inmutable data. It must be inmutable.
+* Store

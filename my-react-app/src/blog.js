@@ -7,7 +7,7 @@ export class PostList extends Component {
     return (
       <div>
         {this.props.list.map(post => (
-          <div style={{ textAlign: `justify`, marginBottom: `1rem` }}>
+          <div style={{ textAlign: `justify`, marginBottom: `2rem` }}>
             <h4>
               {post.id} | {post.titulo}
             </h4>
@@ -74,7 +74,8 @@ export default class Blog extends Component {
     switch (this.state.reqType) {
       case this.reqTypes.getAll:
         return <PostList list={this.state.list} />;
+      default:
+        return <div>No data available</div>;
     }
-    return <div></div>;
   }
 }
